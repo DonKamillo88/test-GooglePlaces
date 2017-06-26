@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GooglePlaces</string>
+    <string name="error_msg">Something went wrong, please try again later.</string>
+    <string name="bar_list">List</string>
+    <string name="bar_map">Map</string>
+
+    <string name="you_are_here">You are here</string>
+    <string name="formatted_distance">%d m</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="grant_permission_info">We need access to your location to show nearest bars</string>
+
+</resources>

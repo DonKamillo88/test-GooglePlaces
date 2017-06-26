@@ -1,0 +1,167 @@
+{
+  "html_attributions" : [],
+  "results" : [
+    {
+      "geometry" : {
+        "location" : {
+          "lat" : 51.4863488,
+          "lng" : 0.01740359999999999
+        },
+        "viewport" : {
+          "northeast" : {
+            "lat" : 51.4876977802915,
+            "lng" : 0.01875258029150203
+          },
+          "southwest" : {
+            "lat" : 51.4849998197085,
+            "lng" : 0.01605461970849797
+          }
+        }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+      "id" : "b03108bcba9bdbdb69aba86d2f4d0d0a28fdd3a1",
+      "name" : "Angerstein Hotel",
+      "opening_hours" : {
+        "open_now" : true,
+        "weekday_text" : []
+      },
+      "photos" : [
+        {
+          "height" : 519,
+          "html_attributions" : [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/113980593549129977476/photos\"\u003eAngerstein Hotel\u003c/a\u003e"
+          ],
+          "photo_reference" : "CmRaAAAAFjKtAxeGHZFE3a8BS7Sv0kC_3-KqyV1rP_8UfoUFDfMGXXH8rWSyz0NR2MeymFabU5cRwUpZV5UBpHs6rQAFxQnNuzLIO_tg2WmT2Yjs6WYM_tFXp_o08H9kXiv8naUUEhBLH1n0KS-U5x7bFeNLDWeVGhSbCUrtQGCgTqMCdE5kMwnnlav7yA",
+          "width" : 520
+        }
+      ],
+      "place_id" : "ChIJ5QKI1Duo2EcR12zVZnRnxpI",
+      "rating" : 3.5,
+      "reference" : "CmRSAAAAHnVUIn3xfnjQzxnim-V16arhXAoNdMbgiRd-cIvWA-H99AxKRnT8d9kYqLrVLZ6xMZdzoY6dc5Bss6M0Wk_UpIjPp3Gn2lE_KqtcNyM7iENOEdsZ4CxwYZ6DZpAwP8iQEhCTehxOF61q_1ZGKykMlrOYGhTardmBu5wBOAj6FXG8OHT35vEVcQ",
+      "scope" : "GOOGLE",
+      "types" : [ "bar", "lodging", "point_of_interest", "establishment" ],
+      "vicinity" : "108 Woolwich Road, London"
+    },
+    {
+      "geometry" : {
+        "location" : {
+          "lat" : 51.4848336,
+          "lng" : 0.0032876
+        },
+        "viewport" : {
+          "northeast" : {
+            "lat" : 51.4861415802915,
+            "lng" : 0.004685180291502031
+          },
+          "southwest" : {
+            "lat" : 51.4834436197085,
+            "lng" : 0.00198721970849797
+          }
+        }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+      "id" : "a5ee2aa7844fccafafd9dfddda5de37176777c5a",
+      "name" : "The King William Hotel",
+      "opening_hours" : {
+        "open_now" : true,
+        "weekday_text" : []
+      },
+      "photos" : [
+        {
+          "height" : 2988,
+          "html_attributions" : [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/104504826039481110857/photos\"\u003eYelena Stadnikova\u003c/a\u003e"
+          ],
+          "photo_reference" : "CmRaAAAAfr0qGIsDzaDaiALnsuYtLyt7acyl0RWORjcTig6C1KJMvOw-JAZ_pbU-w3n8TEEIkmN_iMGabSHR0dgeQW7NWxs82sEv7vvGO0VNcG5aI97mStTAIfgbUyyGQMUxKYrFEhA7H8rL-FV2uuQXFUIPXINVGhQfbvjiT84h5vvwYa8bblxNGWfq5A",
+          "width" : 5312
+        }
+      ],
+      "place_id" : "ChIJKxFPKc4EdkgR0FeTHOZJrg0",
+      "rating" : 3,
+      "reference" : "CmRRAAAADlj5igGq5NB1VGdNtPM1wx8uOrWR92edqg3vEDXETGe1Jj0uOednoN9BnPK4s54xqRARqjZOFsMe-LFXgsVBHAkUsuI_KXQUJARTmk0-r4LId18BijttkAoltZLWUPi0EhCWstggLrlJ-gPmNLA7cGTkGhSfJQo05RnB6bpSrhfbuq2YMg5amw",
+      "scope" : "GOOGLE",
+      "types" : [
+        "bar",
+        "lodging",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity" : "155-157 Trafalgar Road, London"
+    },
+    {
+      "geometry" : {
+        "location" : {
+          "lat" : 51.4839619,
+          "lng" : 0.0013217
+        },
+        "viewport" : {
+          "northeast" : {
+            "lat" : 51.48528803029149,
+            "lng" : 0.00252618029150203
+          },
+          "southwest" : {
+            "lat" : 51.48259006970849,
+            "lng" : -0.00017178029150203
+          }
+        }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id" : "ec5a75825be688bf586ec1623c72f75497a8d1e3",
+      "name" : "Hardy's Pub",
+      "opening_hours" : {
+        "open_now" : true,
+        "weekday_text" : []
+      },
+      "place_id" : "ChIJYbdZ5Ceo2EcRjTtM2zM8_4o",
+      "rating" : 4.6,
+      "reference" : "CmRSAAAAMhjEQ-QQKAo6r0FpSDbifAQgjTSmRDGO1ejMCZet3L8XuKgIPgO7Qs7IReeCPe9-GkjWxbMkVZXIla7GEnqFyFTUqo6QTlKHtkL7iT1a1nQVSNB5XiQ83IcwB8Nq5z1yEhCoReebzXCy3ghOqKt7PryKGhRZE6L99D1Yqh9FoNYiZVO6xG2MJg",
+      "scope" : "GOOGLE",
+      "types" : [ "bar", "point_of_interest", "establishment" ],
+      "vicinity" : "88 Trafalgar Road, London"
+    },
+    {
+      "geometry" : {
+        "location" : {
+          "lat" : 51.4818024,
+          "lng" : -0.0011505
+        },
+        "viewport" : {
+          "northeast" : {
+            "lat" : 51.4831614302915,
+            "lng" : 0.0002878802915020302
+          },
+          "southwest" : {
+            "lat" : 51.4804634697085,
+            "lng" : -0.00241008029150203
+          }
+        }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id" : "6e96c9db7a87c110dd140930af658783853a20ab",
+      "name" : "Plume of Feathers",
+      "opening_hours" : {
+        "open_now" : true,
+        "weekday_text" : []
+      },
+      "photos" : [
+        {
+          "height" : 1536,
+          "html_attributions" : [
+            "\u003ca href=\"https://maps.google.com/maps/contrib/112003063604804444741/photos\"\u003eSusan Lane\u003c/a\u003e"
+          ],
+          "photo_reference" : "CmRaAAAAssyi1NngPzedeUFhcHTDTqA3GWQ8fUCdmzEpjG9ibt6yvBn7q6Ry0Oqj6hgm3aSwMNDJQ78Nt0R6hmkWgcp0K-BRPRFSpkMDAhHbjEsgidZFIA6xIpmZyPmUxCnxHDbzEhD7UmuMmKvHhyAOyHKvCSUaGhTcPu1-1ZCxD1LFzsHDmKjLPpTpAA",
+          "width" : 2560
+        }
+      ],
+      "place_id" : "ChIJj4SiloICdkgRNLxZhNfgDuA",
+      "rating" : 4.6,
+      "reference" : "CmRSAAAAlb9un2od7AW6Eg1uVHpz9dx2uew1naf5tc3eYcJLNqDbAOLVvjdzMRfNd_C77R0ASdYDixocK34rt_IQ5vc5dPIdqWUhy1B-lNVE0yXn9FMJLrO1g9r0QC2HKtyhc8XiEhAS8LqQqjQJ5I7dN2TQdSVZGhSY9MfgVPKN5r3gXjqZzWtRe-K42w",
+      "scope" : "GOOGLE",
+      "types" : [ "bar", "restaurant", "food", "point_of_interest", "establishment" ],
+      "vicinity" : "19 Park Vista, London"
+    }
+  ],
+  "status" : "OK"
+}

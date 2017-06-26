@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="google_places_api_key" translatable="false">AIzaSyDcWX47OJ06PRIRl_HlMf1EBiWK-2JxS_A</string>
+    <string name="google_maps_api_key" translatable="false">AIzaSyBP-HmnDHONVdbhCNBwv3OoQNW3SAT9M30</string>
+
+</resources>
