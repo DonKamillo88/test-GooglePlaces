@@ -1,9 +1,6 @@
 package com.donkamillo.googleplaces.util;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
-import android.support.v4.app.ActivityCompat;
 
 import com.donkamillo.googleplaces.R;
 import com.donkamillo.googleplaces.data.model.PlaceData;
@@ -13,15 +10,7 @@ import com.donkamillo.googleplaces.data.model.PlaceData;
  */
 
 public class Utils {
-    public static final int LOCATION_PERMISSION_ARG = 1;
     public static final int MINIMAL_DISTANCE = 10;
-
-
-    public static void requestLocationPermission(Context context) {
-        ActivityCompat.requestPermissions((Activity) context,
-                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                LOCATION_PERMISSION_ARG);
-    }
 
     public static double getDistance(double currentLat, double currentLng, PlaceData.Location pointLocation) {
         return getDistance(currentLat, pointLocation.getLat(), currentLng, pointLocation.getLng(), 0, 0);

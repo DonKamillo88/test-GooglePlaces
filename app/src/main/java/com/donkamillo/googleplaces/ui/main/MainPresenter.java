@@ -1,13 +1,12 @@
 package com.donkamillo.googleplaces.ui.main;
 
-import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 
 import com.donkamillo.googleplaces.R;
 import com.donkamillo.googleplaces.data.DataRepository;
@@ -15,9 +14,12 @@ import com.donkamillo.googleplaces.data.DataSource;
 import com.donkamillo.googleplaces.data.model.PlaceData;
 import com.donkamillo.googleplaces.data.model.RequestPlacesDataModel;
 import com.donkamillo.googleplaces.data.remote.RemoteDataSource;
+import com.donkamillo.googleplaces.util.PermissionUtils;
 import com.donkamillo.googleplaces.util.Utils;
 
 import java.util.Collections;
+
+import static com.donkamillo.googleplaces.ui.main.MainActivity.LOCATION_PERMISSION_ARG;
 
 /**
  * Created by DonKamillo on 24.06.2017.
@@ -87,6 +89,7 @@ public class MainPresenter implements MainContract.Presenter {
         }
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     public void updateData(final Context context) {
         final LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
@@ -117,9 +120,7 @@ public class MainPresenter implements MainContract.Presenter {
         view.setPlacesViewVisible(false);
         view.setInfoViewVisible(false);
 
-        if (ContextCompat.checkSelfPermission(context,
-                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
+        if (PermissionUtils.isLocationGranted(context)) {
             Location currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if (currentLocation == null) {
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 1, locationListener);
@@ -127,7 +128,8 @@ public class MainPresenter implements MainContract.Presenter {
                 getPlaces(context, currentLocation.getLatitude(), currentLocation.getLongitude());
             }
         } else {
-            Utils.requestLocationPermission(context);
+            PermissionUtils.requestLocationPermission((Activity) context, LOCATION_PERMISSION_ARG);
+
         }
     }
 

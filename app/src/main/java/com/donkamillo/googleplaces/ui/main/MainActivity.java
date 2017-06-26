@@ -1,13 +1,11 @@
 package com.donkamillo.googleplaces.ui.main;
 
 
-import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,14 +21,14 @@ import com.donkamillo.googleplaces.ui.placesList.PlacesListFragment;
 import com.donkamillo.googleplaces.ui.placesList.PlacesListPresenter;
 import com.donkamillo.googleplaces.ui.placesMap.PlacesMapFragment;
 import com.donkamillo.googleplaces.ui.placesMap.PlacesMapPresenter;
-import com.donkamillo.googleplaces.util.Utils;
+import com.donkamillo.googleplaces.util.PermissionUtils;
 
 import static com.donkamillo.googleplaces.ui.main.MainPagerAdapter.LIST_MAP_ID;
-import static com.donkamillo.googleplaces.util.Utils.LOCATION_PERMISSION_ARG;
 
 
 public class MainActivity extends AppCompatActivity implements PlacesListFragment.OnItemSelectedListener, MainContract.View {
     private static final String PLACE_DATA_SAVE_INSTANCE_ARG = "place_data_save_instance";
+    public static final int LOCATION_PERMISSION_ARG = 1;
 
     private LinearLayout tabContainer, infoContainer;
     private Button grantPermissionBtn;
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements PlacesListFragmen
     private MainPresenter mainPresenter;
     private PlacesListPresenter placesListPresenter;
     private PlacesMapPresenter placesMapPresenter;
-
 
     private PlacesListFragment placesListFragment;
     private PlacesMapFragment placesMapFragment;
@@ -65,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements PlacesListFragmen
         grantPermissionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.requestLocationPermission(MainActivity.this);
+                PermissionUtils.requestLocationPermission(MainActivity.this, LOCATION_PERMISSION_ARG);
             }
         });
 
@@ -160,10 +157,10 @@ public class MainActivity extends AppCompatActivity implements PlacesListFragmen
             case LOCATION_PERMISSION_ARG: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    if (ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    if (PermissionUtils.isLocationGranted(this)) {
                         mainPresenter.updateData(MainActivity.this);
                     }
+
                 } else {
                     progressBar.setVisibility(View.GONE);
                     tabContainer.setVisibility(View.GONE);
