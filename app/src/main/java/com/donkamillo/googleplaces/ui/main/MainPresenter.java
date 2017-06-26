@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 
 import com.donkamillo.googleplaces.R;
@@ -88,8 +89,29 @@ public class MainPresenter implements MainContract.Presenter {
 
     @Override
     public void updateData(final Context context) {
-        LocationListener locationListener = new MyLocationListener(context);
-        LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        final LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        LocationListener locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                locationManager.removeUpdates(this);
+                getPlaces(context, location.getLatitude(), location.getLongitude());
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
 
         view.setProgressBar(true);
         view.setPlacesViewVisible(false);
@@ -100,7 +122,7 @@ public class MainPresenter implements MainContract.Presenter {
 
             Location currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if (currentLocation == null) {
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1, locationListener);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 1, locationListener);
             } else {
                 getPlaces(context, currentLocation.getLatitude(), currentLocation.getLongitude());
             }
